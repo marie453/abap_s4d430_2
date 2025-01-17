@@ -1,0 +1,23 @@
+projection implementation in class zbp_c_06_flight unique;
+strict ( 2 );
+
+define behavior for ZC_06_Flight alias Flight
+{
+  use create;
+  use update;
+  use delete;
+  use association _Bookings { create; }
+}
+
+define behavior for ZC_06_Booking alias Booking
+{
+use delete;
+use update;
+use association _FLight;
+use action CancelBooking;
+
+
+
+
+
+}
